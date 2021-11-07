@@ -1,12 +1,13 @@
 .Thankyou {
-  /* background: url("./Images/thankyou.jpg");
-  height: 100vh;*/
+  background: url("./Images/thankyou.jpg");
+  height: 100vh;
   filter: grayscale(40%);
-  padding: none;
   justify-items: center;
   align-items: center;
   display: flex;
+  background-repeat: no-repeat;
   flex-direction: column;
+  background-size: cover;
 }
 .Thankyou > h1 {
   margin-top: 20vh;

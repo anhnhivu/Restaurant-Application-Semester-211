@@ -1,0 +1,219 @@
+{
+  "orders": [
+    {
+      "id": 1
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Seafood Black Pepper",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Hai_San_Xot_Tieu_Den_400x275.jpg",
+      "price": "7.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 2,
+      "name": "Fisherman's Tuna",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Ca_Ngu_400x275.jpg",
+      "price": "7.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 3,
+      "name": "Korean BBQ Spicy Beef",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Bo_BBQ_Xot_Cay_Han_Quoc_400x275.jpg",
+      "price": "6.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 4,
+      "name": "Supreme's Meat Lover",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Thit_Va_Xuc_Xich_400x275.jpg",
+      "price": "6.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 5,
+      "name": "Hawaiian Paradise",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Hawaiian_400x275.jpg",
+      "price": "6.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 6,
+      "name": "Shrimp Campi",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Tom_Xot_Bo_Toi_400x275.jpg",
+      "price": "7.49",
+      "type": "Pizza"
+    },
+    {
+      "id": 7,
+      "name": "Chicken Deluxe",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Ga_Nuong_Nam_400x275.jpg",
+      "price": "5.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 8,
+      "name": "Pepperoni",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pizza_Xuc_Xich_Nuong_400x275.jpg",
+      "price": "4.99",
+      "type": "Pizza"
+    },
+    {
+      "id": 9,
+      "name": "Spaghetti Bolognese",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Mi_Y_Thit_Bam_Xot_Ca_Chua_400x275.jpg",
+      "price": "7.99",
+      "type": "Pasta"
+    },
+    {
+      "id": 10,
+      "name": "Mariana Seafood Spaghetti",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Mi_Y_Hai_San_Xot_Ca_Chua_400x275.jpg",
+      "price": "8.49",
+      "type": "Pasta"
+    },
+    {
+      "id": 11,
+      "name": "COMBO My Box 1",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/My_Box_99k_400x275.jpg",
+      "price": "9.99",
+      "type": "Combo"
+    },
+    {
+      "id": 12,
+      "name": "COMBO My Box 2",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/My_Box_129k_400x275.jpg",
+      "price": "12.99",
+      "type": "Combo"
+    },
+    {
+      "id": 13,
+      "name": "COMBO My Box 3",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/My_Box_159k_400x275.jpg",
+      "price": "15.99",
+      "type": "Combo"
+    },
+    {
+      "id": 14,
+      "name": "COMBO My Box 4",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/My_Box_179kG_400x275.jpg",
+      "price": "17.99",
+      "type": "Combo"
+    },
+    {
+      "id": 15,
+      "name": "COMBO My Box 5",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/My_Box_179kKT_400x275.jpg",
+      "price": "17.99",
+      "type": "Combo"
+    },
+    {
+      "id": 16,
+      "name": "Garlic Bread",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Banh_Mi_Bo_Toi_400x275.jpg",
+      "price": "2.99",
+      "type": "Starter"
+    },
+    {
+      "id": 17,
+      "name": "Crinkle-Cut French Fries",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Khoai_Tay_Chien_400x275.jpg",
+      "price": "4.99",
+      "type": "Starter"
+    },
+    {
+      "id": 18,
+      "name": "Calmari",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Muc_Chien_Gion_400x275.jpg",
+      "price": "4.99",
+      "type": "Starter"
+    },
+    {
+      "id": 19,
+      "name": "Tuna Bacon Salad",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Xa_Lach_Ca_Ngu_400x275.jpg",
+      "price": "4.99",
+      "type": "Starter"
+    },
+    {
+      "id": 20,
+      "name": "Cheesy Pops",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Banh_Cuon_Pho_Mai_400x275.jpg",
+      "price": "6.99",
+      "type": "Starter"
+    },
+    {
+      "id": 21,
+      "name": "Chicken Wings",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Canh_Ga_Nuong_BBQ_400x275.jpg",
+      "price": "9.99",
+      "type": "Starter"
+    },
+    {
+      "id": 22,
+      "name": "Aquafina",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Aquafina_400x275.jpg",
+      "price": "1.99",
+      "type": "Drink"
+    },
+    {
+      "id": 23,
+      "name": "Pepsi Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pepsi_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 24,
+      "name": "7Up Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/7Up_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 25,
+      "name": "Miranda Orange Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Mirinda_Orange_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 26,
+      "name": "Miranda Soda Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Mirinda_Soda_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 27,
+      "name": "Pepsi No Calories Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pepsi_NoCalo_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 28,
+      "name": "Pepsi Lemon Can",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pepsi_Lemon_Can_400x275.jpg",
+      "price": "2.99",
+      "type": "Drink"
+    },
+    {
+      "id": 29,
+      "name": "Pepsi 1.5L",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/Pepsi_1.5L_400x275.jpg",
+      "price": "4.99",
+      "type": "Drink"
+    },
+    {
+      "id": 30,
+      "name": "7Up 1.5L",
+      "src": "https://api.pizzahut.vn/images/Web_V3/Products/7Up_1.5L_400x275.jpg",
+      "price": "4.99",
+      "type": "Drink"
+    }
+  ]
+}
