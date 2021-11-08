@@ -51,7 +51,9 @@ Welcome Page -> SignUp/LogIn ---> Order -> Payment ---> Thank You
              -- Reserve Table --> Reservation Page ---> Thank You
 ```
 
-
+## Website URL and QR Code
+**URL:** https://tinyurl.com/kdduymdc
+**QR Code:** 
 
 ## Disclaimer
 - We are using photos from `pizzahut.vn` for the purpose of demonstration.
