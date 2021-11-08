@@ -22,10 +22,11 @@ npm start
 ```
 App
   |
-  |___ WelcomePage (Hero.js)
+  |___ WelcomePage
   |___ ReservePage
   |___ Signup
   |___ Login
+  |___ Thankyou
   |
   |___ Homepage (Ordering Page)
   |           |___ Categories     
@@ -37,11 +38,9 @@ App
   |                                 |___ Confirmation (Modal) 
   |
   |___ Checkout
-  |          |___ VisaCheckOut
-  |          |               
-  |          |___ MomoCheckout
-  |
-  |___ Thankyou
+             |___ VisaCheckOut
+             |               
+             |___ MomoCheckout
 ```
 
 ## Screen Flow
