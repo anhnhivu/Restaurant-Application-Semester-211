@@ -52,9 +52,12 @@ Welcome Page -> SignUp/LogIn ---> Order -> Payment ---> Thank You
 ```
 
 ## Website URL and QR Code
-**URL:** https://tinyurl.com/kdduymdc
-**QR Code:** 
-![qr_code](./qr_code.png)
-
+You can visit our website using ```URL``` or Scanning ```QR Code``` <br>
+**URL:** https://tinyurl.com/kdduymdc <br>
+**QR Code:**<br>
+<p align="center">
+  <img src="./qr_code.png" alt="drawing" width="200"/>
+</p>
+    
 ## Disclaimer
 - We are using photos from `pizzahut.vn` for the purpose of demonstration.
