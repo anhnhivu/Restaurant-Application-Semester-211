@@ -11,20 +11,22 @@ We are choosing the Three-Layer Architecture:
 
 ## Deployment Diagram
 
-![UML-Deployment.drawio (2)](https://github.com/anhnhivu/Restaurant-Application-Semester-211/blob/master/Documentation/Diagrams/UML-Deployment.drawio%20(2).png)
 
-
+<p align="center">
+  <img src="https://github.com/anhnhivu/Restaurant-Application-Semester-211/blob/master/Documentation/Diagrams/UML-Deployment.drawio%20(2).png" width="800" />
+ </p>
 
 
 
 ## Component Diagram
 
-
-
-![component_diagram](./Diagrams/component_diagram.png)
-
-
+<p align="center">
+  <img src="./Diagrams/component_diagram.png" width="750" />
+ </p>
 
 ## Package Diagram
 
-![package_diagram](./Diagrams/package_diagram.png)
+
+<p align="center">
+  <img src="./Diagrams/package_diagram.png" width="800" />
+ </p>
