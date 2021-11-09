@@ -2,10 +2,9 @@
 
 ## Use Case Diagram
 
-
-
-![FoodOrdering](./Diagrams/FoodOrdering.png)
-
+<p align="center">
+  <img src="./Diagrams/FoodOrdering.png" width="700"/>
+ </p>
 
 
 ## Sequence Diagram
@@ -19,4 +18,8 @@
 
 
 ### Payment
-![Sequence_Payment](./Diagrams/Sequence_Payment.png)
+
+
+<p align="center">
+  <img src="./Diagrams/Sequence_Payment.png" width="700"/>
+ </p
