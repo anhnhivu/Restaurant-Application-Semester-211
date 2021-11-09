@@ -37,13 +37,14 @@ function Reserve() {
       ></div>
       <div className="rightSide">
         <h1>Book a Table</h1>
-        <form id="reserve-form" action="/thankyou">
+        <form id="reserve-form" onSubmit={sendData}>
           <label htmlFor="name">Full Name</label>
           <input
             name="name"
             placeholder="Enter full name..."
             type="text"
             id="Fullname"
+            required
           />
           <label htmlFor="email">Email</label>
           <input
@@ -51,6 +52,7 @@ function Reserve() {
             placeholder="Enter email..."
             type="email"
             id="Email"
+            required
           />
           <div className="datetimebox">
             <DateTimePicker
@@ -74,10 +76,7 @@ function Reserve() {
             name="message"
             id="customernotes"
           ></textarea>
-          <button type="submit" onClick={sendData}>
-            {" "}
-            Send Message
-          </button>
+          <button type="submit"> Send Message</button>
         </form>
       </div>
     </div>
