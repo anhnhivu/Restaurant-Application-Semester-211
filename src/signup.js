@@ -2,16 +2,22 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { auth } from "./firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { setDoc, doc, getFirestore } from "firebase/firestore";
 import "./signup.css";
 function Signup() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const Register = (e) => {
+  const Register = async (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(async (userCredential) => {
         const user = userCredential.user;
+        const db = getFirestore();
+        await setDoc(doc(db, "user_spend", `${user.uid}`), {
+          id: user.uid,
+          spend: 0,
+        });
         history.push("/homepage");
       })
       .catch((error) => alert(error.message));
