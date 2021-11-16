@@ -24,28 +24,25 @@ function Signup() {
         </h1>
         <div className="FormContainer">
           <h2>Sign Up</h2>
-          <form className="FormContain">
+          <form className="FormContain" onSubmit={Register}>
             <h5>E-mail</h5>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <h5>Password</h5>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
-            <button
-              className="login_signinbutton"
-              type="submit"
-              onClick={Register}
-            >
+            <button className="login_signinbutton" type="submit">
               Sign Up
             </button>
           </form>
-          <div className="Signup"></div>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ function NavigateBar() {
         Welcome!
       </NavLink>
       <div className="SignupLogin">
-        <NavLink className="Signup" to="/signup">
+        <NavLink className="SignupNav" to="/signup">
           Sign up
         </NavLink>
         <NavLink className="Login" to="/login">
