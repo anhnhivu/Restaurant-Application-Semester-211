@@ -44,7 +44,7 @@ function Login() {
           </button>
         </form>
         <div className="Signup">
-          <ArrowForwardIosIcon sx={{ fontSize: 15 }} />
+          <ArrowForwardIosIcon sx={{ fontSize: 15, color: "white" }} />
           <Link to="/signup" style={{ color: "#FFF", fontSize: "14px" }}>
             {" "}
             Do not have an account?
