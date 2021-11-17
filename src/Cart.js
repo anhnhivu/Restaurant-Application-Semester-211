@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import PurchasePopup from "./PurchasePopup";
 import { Link } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import {
   doc,
   getDoc,
@@ -92,6 +92,7 @@ const ItemCart = (props) => {
 };
 
 const Cart = (props) => {
+  const [old_payment, setoldpayment] = useState(0);
   const totalPrice = 0
     ? props.cart.length === 0
     : props.cart
@@ -107,7 +108,6 @@ const Cart = (props) => {
     setModalOpenState(true);
   };
   const [Price, setPrice] = useState(0);
-  var old_payment = 0;
   const [myFlag, setmyFlag] = useState(0);
   const renderResult = () => {
     onAuthStateChanged(auth, (user) => {
@@ -115,7 +115,7 @@ const Cart = (props) => {
         setmyFlag(1);
       }
     });
-    if (myFlag) {
+    if (myFlag && Price != totalPrice) {
       return (
         <big>
           <span style={{ marginRight: "20px" }}> Total </span>${" "}
@@ -196,7 +196,7 @@ const Cart = (props) => {
                     openModal();
                     onAuthStateChanged(auth, async (user) => {
                       if (user) {
-                        old_payment = totalPrice;
+                        setoldpayment(totalPrice);
                         const docRef = doc(db, "user_spend", `${user.uid}`);
                         const docSnap = await getDoc(docRef);
                         if (docSnap.exists()) {
@@ -223,13 +223,6 @@ const Cart = (props) => {
                   <div>
                     <li className="fw-bold d-flex justify-content-between align-items-center">
                       {renderResult()}
-                      {/* <big>
-                        <span style={{ marginRight: "20px" }}> Total </span>${" "}
-                        <span className="card-text">
-                          <del>{totalPrice} </del>
-                        </span>{" "}
-                        $<span className="card-text"> {Price.toFixed(2)}</span>
-                      </big> */}
                     </li>
                   </div>
                   <div>
@@ -245,6 +238,17 @@ const Cart = (props) => {
                           },
                         }}
                         style={{ color: "inherit", textDecoration: "none" }}
+                        onClick={() => {
+                          signOut(auth)
+                            .then(() => {
+                              // Sign-out successful.
+                              console.log("I am sign out");
+                              setoldpayment(0);
+                            })
+                            .catch((error) => {
+                              // An error happened.
+                            });
+                        }}
                       >
                         {" "}
                         PURCHASE
