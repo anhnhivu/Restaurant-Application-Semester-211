@@ -16,9 +16,10 @@
     "Lucida Sans", Arial, sans-serif;
   position: relative;
 }
-.Navlink :hover {
+.Navlink:hover {
   color: red;
 }
+
 .SignupLogin {
   display: block;
   position: absolute;
@@ -43,6 +44,9 @@
   margin-top: 35px;
   margin-right: 1vw;
 }
+.Signup:hover{
+  color:red
+}
 .Login {
   color: white;
   font-size: 1rem;
@@ -54,4 +58,7 @@
     "Lucida Sans", Arial, sans-serif;
   margin-top: 35px;
   margin-right: 1vw;
+}
+.Login:hover{
+  color:red
 }
