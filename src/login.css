@@ -34,6 +34,8 @@
 .FormContain {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-bottom: 0;
 }
 .FormContainer > form > input {
   width: 97%;
@@ -55,9 +57,6 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.FormContain {
-  width: 100%;
-}
 .login_signinbutton {
   margin-top: 10px;
   width: 100%;
@@ -69,4 +68,9 @@
   color: #fff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.Signup {
+  margin-top: 10px;
+  align-self: start;
+  padding-left: 22px;
 }

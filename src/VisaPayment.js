@@ -45,7 +45,7 @@ const VisaPayment = (props) => {
 
         if(input.length <=19){
             if(input.length === 4 || input.length === 9 || input.length === 14){
-                setCard(e.target.value + "_")
+                setCard(e.target.value + " ")
             }
             else setCard(e.target.value)
         }
