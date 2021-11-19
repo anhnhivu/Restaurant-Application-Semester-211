@@ -1,0 +1,5 @@
+.truncate-box {
+    height: 24em;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }

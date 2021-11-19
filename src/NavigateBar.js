@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./NavigateBar.css";
 function NavigateBar() {
   return (
     <div className="Navigatebar">
-      <NavLink className="Navlink" to="/">
+      <Link className="Navlink" to="/">
         Welcome!
-      </NavLink>
+      </Link>
       <div className="SignupLogin">
         <NavLink className="SignupNav" to="/signup">
           Sign up

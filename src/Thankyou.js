@@ -1,7 +1,7 @@
 import React from "react";
 import "./Thankyou.css";
 import { Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
+import HomeIcon from '@mui/icons-material/Home';
 function Thankyou() {
   return (
     <div className="Thankyou">
