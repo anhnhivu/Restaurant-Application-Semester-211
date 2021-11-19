@@ -193,9 +193,6 @@ a.nav-link {
   transition: opacity 0.15s linear;
 }
 
-.fade.show {
-}
-
 .tab-content > .tab-pane {
   display: none;
 }
