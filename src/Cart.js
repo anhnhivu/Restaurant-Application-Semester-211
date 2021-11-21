@@ -142,7 +142,7 @@ const Cart = (props) => {
     <div className="card h-100">
       <div className="card-body d-flex flex-column flex-row align-items-stretch">
         <h5 className="d-flex justify-content-between align-content-center">
-          <span>Order</span>
+          <span>Order ({props.cart.length})</span>  
           <button
             onClick={() => {
               props.setCart([]);
@@ -153,30 +153,52 @@ const Cart = (props) => {
           </button>
         </h5>
         <hr />
-
-        <ul
-          id="orderlist"
-          className="list-unstyled d-flex flex-column align-items-stretch"
-        >
-          {props.cart.map((itemInCart) => {
-            return (
-              <ItemCart
-                key={itemInCart.id}
-                id={itemInCart.id}
-                src={itemInCart.src}
-                name={itemInCart.name}
-                price={itemInCart.price}
-                quantity={itemInCart.quantity}
-                cart={props.cart}
-                setCart={props.setCart}
-              />
-            );
-          })}
-        </ul>
+        <div className="truncate-box">
+          <ul
+            id="orderlist"
+            className="list-unstyled d-flex flex-column align-items-stretch"
+          >
+            {props.cart.map((itemInCart) => {
+              return (
+                <ItemCart
+                  key={itemInCart.id}
+                  id={itemInCart.id}
+                  src={itemInCart.src}
+                  name={itemInCart.name}
+                  price={itemInCart.price}
+                  quantity={itemInCart.quantity}
+                  cart={props.cart}
+                  setCart={props.setCart}
+                />
+              );
+            })}
+          </ul>
+        </div>
+        
 
         <div className="align-self-stretch mt-auto">
           <hr />
           <ul className="list-unstyled">
+            <li className="d-flex justify-content-between align-items-center">
+              SubTotal
+              <big>
+                {" "}
+                $ {" "}
+                <span id="totalcost" className="card-text">
+                  {(totalPrice*0.9).toFixed(2)}
+                </span>
+              </big>
+            </li>
+            <li className="d-flex justify-content-between align-items-center">
+              Tax
+              <big>
+                {" "}
+                $ {" "}
+                <span id="totalcost" className="card-text">
+                  {(totalPrice*0.1).toFixed(2)}
+                </span>
+              </big>
+            </li>
             <li className="fw-bold d-flex justify-content-between align-items-center">
               Total
               <big>

@@ -20,10 +20,12 @@ const VisaPayment = (props) => {
 
     // 4111 1111 1111 1111
     const handleValidation = () => {
-        return card.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/)
+        const input = card.replace(/\s+/g, '');
+        console.log(input);
+        return input.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/)
         && endDate.match(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/)
         && cvv.match(/\d{3}/)
-      };
+    };
     
     const contactSubmit = (e) => {
         e.preventDefault();
@@ -42,7 +44,6 @@ const VisaPayment = (props) => {
 
     const  handleChange = (e) => {
         const input = String(e.target.value);
-
         if(input.length <=19){
             if(input.length === 4 || input.length === 9 || input.length === 14){
                 setCard(e.target.value + " ")
@@ -54,16 +55,21 @@ const VisaPayment = (props) => {
 
     
     const handleChangeCvv = (e) => {
-        setCvv(e.target.value);  
+        const input = String(e.target.value);
+        if(input.length <= 3){
+            setCvv(e.target.value); 
+        }
+             
     };
     const handleChangeED = (e) => {
+        if(e.target.value.length <= 5)
         setEndDate(e.target.value);  
     };
 
     return (
         <div className="tab-pane fade show active" >
             <div className="tab-single">
-                <form className="form-card" onSubmit={contactSubmit}>
+                <form className="form-card" onSubmit={contactSubmit} autoComplete="nope">
                     <div className="row">
                         <div className="col-12" >
                             <div className="form-group"  >
@@ -91,7 +97,7 @@ const VisaPayment = (props) => {
                             <div className="form-group">
                                 <input type="text" 
                                 onChange={handleChangeED}
-                                className="form-control p-0" style={inputStyle} id="expdate" required />
+                                className="form-control p-0" style={inputStyle} id="expdate" required maxLength="5" />
                                 <label className="form-control-placeholder p-0" htmlFor="expdate">ExpirationDate</label>
                             </div>
                         </div>
@@ -99,7 +105,7 @@ const VisaPayment = (props) => {
                             <div className="form-group">
                                 <input type="password" 
                                 onChange={handleChangeCvv}
-                                className="form-control p-0" style={inputStyle} id="passw" required />
+                                className="form-control p-0" style={inputStyle} id="passw" required  maxLength="3"/>
                                 <label className="form-control-placeholder p-0" htmlFor="passw">CVV</label>
                             </div>
                         </div>
