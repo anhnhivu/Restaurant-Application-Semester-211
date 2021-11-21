@@ -1,8 +1,14 @@
-body {
+/* body {
   background: url(./Images/wallpaper.jpg);
   background-position: center;
   height: 100%;
   overflow: hidden;
+} */
+body {
+  background: url(./Images/wallpaper.jpg);
+  /* margin: 20px; */
+  background-position: center;
+  background-size: cover;
 }
 .text-truncate-container {
   display: -webkit-box;
@@ -185,9 +191,6 @@ a.nav-link {
 .fade {
   opacity: 1;
   transition: opacity 0.15s linear;
-}
-
-.fade.show {
 }
 
 .tab-content > .tab-pane {

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap";
 import "./App.css";
 import { Button, Row, Col } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import PurchasePopup from "./PurchasePopup";
 import { Link } from "react-router-dom";
@@ -94,6 +94,7 @@ const ItemCart = (props) => {
 
 const Cart = (props) => {
   const [old_payment, setoldpayment] = useState(0);
+  const [myuser, setmyuser] = useState(null);
   const totalPrice = 0
     ? props.cart.length === 0
     : props.cart
@@ -109,14 +110,21 @@ const Cart = (props) => {
     setModalOpenState(true);
   };
   const [Price, setPrice] = useState(0);
-  const [myFlag, setmyFlag] = useState(0);
-  const renderResult = () => {
-    onAuthStateChanged(auth, (user) => {
+  useEffect(() => {
+    setoldpayment(totalPrice);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      //detaching the listener
+
       if (user) {
-        setmyFlag(1);
+        setmyuser(user);
+      } else {
+        // No user is signed in...code to handle unauthenticated users.
       }
     });
-    if (myFlag && Price != totalPrice) {
+    return () => unsubscribe(); // unsubscribing from the listener when the component is unmounting.
+  }, [totalPrice]);
+  const renderResult = () => {
+    if (myuser && Price != totalPrice) {
       return (
         <big>
           <span style={{ marginRight: "20px" }}> Total </span>${" "}
@@ -130,11 +138,10 @@ const Cart = (props) => {
       return (
         <big>
           {" "}
-          <span style={{ marginRight: "20px" }}> Total </span>$ {" "}
+          <span style={{ marginRight: "20px" }}> Total </span>${" "}
           <span className="card-text">{totalPrice}</span>
         </big>
       );
-
     }
   };
   return (
@@ -202,7 +209,7 @@ const Cart = (props) => {
               Total
               <big>
                 {" "}
-                $ {" "}
+                ${" "}
                 <span id="totalcost" className="card-text">
                   {totalPrice}
                 </span>
@@ -215,24 +222,17 @@ const Cart = (props) => {
               <button
                 type="submit"
                 className="btn btn-danger fw-bold w-100 rounded-pill"
-                onClick={() => {
+                onClick={async () => {
                   if (props.cart.length !== 0) {
                     openModal();
-                    onAuthStateChanged(auth, async (user) => {
-                      if (user) {
-                        setoldpayment(totalPrice);
-                        const docRef = doc(db, "user_spend", `${user.uid}`);
-                        const docSnap = await getDoc(docRef);
-                        if (docSnap.exists()) {
-                          console.log("Document data:", docSnap.data().spend);
-                          setPrice(totalPrice - docSnap.data().spend * 0.05);
-                        }
-
-                        await updateDoc(docRef, {
-                          spend: increment(old_payment),
-                        });
-                      } else setPrice(totalPrice);
-                    });
+                    if (myuser) {
+                      const docRef = doc(db, "user_spend", `${myuser.uid}`);
+                      const docSnap = await getDoc(docRef);
+                      if (docSnap.exists()) {
+                        console.log("Document data:", docSnap.data().spend);
+                        setPrice(totalPrice - docSnap.data().spend * 0.05);
+                      }
+                    } else setPrice(totalPrice);
                   } else alert("Empty cart!! Please choose a product");
                 }}
               >
@@ -262,7 +262,17 @@ const Cart = (props) => {
                           },
                         }}
                         style={{ color: "inherit", textDecoration: "none" }}
-                        onClick={() => {
+                        onClick={async () => {
+                          if (myuser) {
+                            const docRef = doc(
+                              db,
+                              "user_spend",
+                              `${myuser.uid}`
+                            );
+                            await updateDoc(docRef, {
+                              spend: increment(old_payment),
+                            });
+                          }
                           signOut(auth)
                             .then(() => {
                               // Sign-out successful.
