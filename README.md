@@ -58,6 +58,12 @@ You can visit our website using ```URL``` or Scanning ```QR Code``` <br>
 <p align="center">
   <img src="./qr_code.png" alt="drawing" width="200"/>
 </p>
-    
+
+## Payment Guidance
+The input must be a valid VISA card number (Maximum length = 16), but some test card numbers that can be used are: <br>
+`4111 1111 1111 1111`, or `4012888888881881`, `4222222222222`.<br>
+Expiration date (**mm/yy**) has maximum 5 characters.<br>
+CVV password has maximum 3 characters.<br>
+
 ## Disclaimer
 - We are using photos from `pizzahut.vn` for the purpose of demonstration.
