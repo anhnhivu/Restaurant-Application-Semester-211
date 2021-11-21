@@ -116,17 +116,16 @@ const Cart = (props) => {
         setmyFlag(1);
       }
     });
-    if (myFlag && Price !== totalPrice) {
+    if (myFlag && Price != totalPrice) {
       return (
         <big>
-          <span style={{ marginRight: "20px" }}> Total </span>$ {" "}
+          <span style={{ marginRight: "20px" }}> Total </span>${" "}
           <span className="card-text">
             <del>{totalPrice} </del>
           </span>
           $<span className="card-text"> {Price.toFixed(2)}</span>
         </big>
       );
-
     } else {
       return (
         <big>
