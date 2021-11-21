@@ -53,7 +53,7 @@ Welcome Page -> SignUp/LogIn ---> Order -> Payment ---> Thank You
 
 ## Website URL and QR Code
 You can visit our website using ```URL``` or Scanning ```QR Code``` <br>
-**URL:** https://tinyurl.com/kdduymdc <br>
+**URL:** https://pos-restaurant-1d5c6.web.app/ <br>
 **QR Code:**<br>
 <p align="center">
   <img src="./qr_code.png" alt="drawing" width="200"/>
