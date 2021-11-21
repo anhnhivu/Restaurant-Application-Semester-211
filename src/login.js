@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import "./login.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
@@ -44,7 +44,7 @@ function Login() {
           </button>
         </form>
         <div className="Signup">
-          {/* <ArrowForwardIosIcon sx={{ fontSize: 15, color: "white" }} /> */}
+          <ArrowForwardIosIcon sx={{ fontSize: 15, color: "white" }} />
           <Link to="/signup" style={{ color: "#FFF", fontSize: "14px" }}>
             {" "}
             Do not have an account?
