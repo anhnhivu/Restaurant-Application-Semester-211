@@ -4,6 +4,10 @@
 This is a proposed idea of a POS System that is used to deliver a **non-direct contact** between customers and staffs within a restaurant. 
 This repo can be cloned and run directly from your machine **(_Please refer to the User Manual Section_)**.
 
+## MVP
+- Repository: https://github.com/anhnhivu/pos-system
+- Wesbite: https://anhnhivu.github.io/pos-system/
+
 
 ## User Manual
 
